@@ -46,6 +46,7 @@ body {
 }
 
 #bot-play {
+    padding: 4px;
     display: flex;
     gap: 8px;
 }
@@ -54,4 +55,10 @@ body {
     border-color: black;
     border-style: solid;
     min-width: 72px;
+}
+
+#turns {
+    padding: 4px;
+    display: flex;
+    gap: 8px;
 }
