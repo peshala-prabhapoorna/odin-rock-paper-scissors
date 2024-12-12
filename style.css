@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dadada;
+    justify-items: center;
+}
+
+#container {
+    background-color: white;
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container > h1 {
+    padding: 16px;
+}
+
+#scores {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 72px;
+}
+
+.score-tile {
+    display: flex;
+    gap: 8px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px;
+}
+
+#buttons > button {
+    padding: 8px;
+}
+
+#bot-play {
+    display: flex;
+    gap: 8px;
+}
+
+#bot-play-option {
+    border-color: black;
+    border-style: solid;
+    min-width: 72px;
+}
