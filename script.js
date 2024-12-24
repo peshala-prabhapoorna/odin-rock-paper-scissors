@@ -1,6 +1,3 @@
-const turnCountElement = document.querySelector('#turns-count');
-let turnCount = parseInt(turnCountElement.textContent);
-
 const playerScoreElement = document.querySelector('#player-score');
 let playerScore = parseInt(playerScoreElement.textContent);
 
@@ -26,12 +23,10 @@ buttons.forEach((button) => {
 
         updateScore(winner);
 
-        if (turnCount >= 5) {
+        if (playerScore === 5 || botScore === 5) {
             alertWinner();
             restartGame();
-            return;
         }
-        updateTurn();
     });
 });
 
@@ -93,28 +88,18 @@ function updateScore(winner) {
     }
 }
 
-function updateTurn() {
-    turnCount++;
-    turnCountElement.textContent = turnCount;
-}
-
 function alertWinner() {
-    if (playerScore > botScore) {
+    if (playerScore === 5) {
         alert(`${playerName} is the winner!`);  
-    } else if (playerScore < botScore) {
-        alert('Bot is the winner!');
     } else {
-        alert('Game is a draw!');
+        alert('Bot is the winner!');
     }
 }
 
 function restartGame() {
-    turnCountElement.textContent = 0;
     playerScoreElement.textContent = 0;
     botScoreElement.textContent = 0;
     botChoiceElement.textContent = '';
-    turnCount = 0;
     playerScore = 0;
     botScore = 0;
-    
 }
